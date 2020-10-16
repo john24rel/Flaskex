@@ -1,11 +1,11 @@
   - name: Install Apache and others
     yum:
       name:
-        - "{{ service_name}}"
-        - "{{ epel }}"
+        - httpd
+        - epel-release
         - git
-        - "{{ python_3 }}"
-        - "{{ python3_pip }}"
+        - python3
+        - python3-pip
       state: latest
 
   - name: Change Hostname
