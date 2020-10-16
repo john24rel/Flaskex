@@ -2,10 +2,10 @@
     yum:
       name:
         - "{{ service_name}}"
-        - epel-release
+        - "{{ epel }}"
         - git
-        - python3
-        - python3-pip
+        - "{{ python_3 }}"
+        - "{{ python3_pip }}"
       state: latest
 
   - name: Change Hostname
@@ -18,7 +18,7 @@
       state: started
       enabled: yes
 
-  - name: Clone a repo 
+  - name: Clone a Flaskex repo 
     git:
       repo: "{{ flaskex_repo }}" 
       dest: /home/centos/Flaskex
