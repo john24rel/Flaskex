@@ -1,7 +1,7 @@
   - name: Install Apache and others
     yum:
       name:
-        - httpd
+        - "{{ service_name}}"
         - epel-release
         - git
         - python3
